@@ -20,7 +20,8 @@ public class Main {
         System.out.println("How many dollars will be bought? ");
         double vDolar = sc.nextDouble();
 
-        double valorTotal = CurrencyConverter.valorTotalReais(pDolar, vDolar) * CurrencyConverter.IOF + CurrencyConverter.valorTotalReais(pDolar, vDolar);
+        double valorR = CurrencyConverter.valorTotalReais(pDolar, vDolar);
+        double valorTotal = valorR + (valorR * CurrencyConverter.IOF);
 
         System.out.printf("Amount to be paid in reais = %.2f", valorTotal);
 
