@@ -1,8 +1,5 @@
 package ex4_gettersAndSetters;
 
-import ex4_productInStockEncapsulamento.Produto;
-
-import javax.xml.transform.Source;
 import java.util.Locale;
 import java.util.Scanner;
 
