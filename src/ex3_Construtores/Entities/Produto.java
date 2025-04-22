@@ -1,34 +1,44 @@
-package ex3_Construtores.Entities;
+package ex3_construtores.Entities;
 
 public class Produto {
 
-    public String nome;
-    public double preco;
-    public int quantidade;
+    public String name;
+    public double price;
+    public int quantity;
 
-    public Produto(String nome, double preco, int quantidade){
-        this.nome = nome;
-        this.preco = preco;
-        this.quantidade = quantidade;
+    public Produto(){
+
     }
 
+    public Produto(String name, double price, int quantity){
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+    }
+
+    public Produto(String name, double price){
+        this.name = name;
+        this.price = price;
+    }
 
     public double TotalValueInStock(){
 
-        return quantidade * preco;
+        return quantity * price;
     }
 
-    public void AddProducts(int quantidade){
-        this.quantidade += quantidade;
+    public void AddProducts(int quantity){
+
+        this.quantity += quantity;
+
     }
 
-    public void RemoveProducts(int preco){
-                this.quantidade -= quantidade;
+    public void RemoveProducts(int quantity){
+
+        this.quantity -= quantity;
     }
 
     public String toString(){
-        return nome + ", $ " + String.format("%.2f", preco) + ", " + quantidade + " units, Total: $ " + String.format(
-                "%.2f%n", TotalValueInStock());
+        return name + ", $ " + String.format("%.2f", price) + ", " + quantity + " units, Total: $ " + String.format("%.2f%n", TotalValueInStock());
     }
 
 }
