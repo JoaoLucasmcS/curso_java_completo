@@ -1,6 +1,5 @@
 package q3_alunoNota.Application;
 
-import q1_rectangle.Entities.Rectangle;
 import q3_alunoNota.Entities.Student;
 
 import java.util.Locale;
